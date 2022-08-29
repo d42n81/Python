@@ -35,3 +35,4 @@ jobs:
       - name: Test with unnittest
         run: |
           python ./unitTestA11y.py
+          axe --version

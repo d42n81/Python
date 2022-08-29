@@ -6,7 +6,7 @@ import unittest
 from pprint import pprint
 from selenium import webdriver
 from axe_devtools_selenium import AxeDriver
-from axe_devtools_api import Axe
+from axe_devtools_api import Axe, ReportConfiguration
 from pyvirtualdisplay import Display
 
 
@@ -19,7 +19,8 @@ class TestStringMethods(unittest.TestCase):
     
     def takeScan(self):
         self.page.get("http://abcdcomputech.dequecloud.com/")
-        axe = Axe(AxeDriver(self.page))
+        report_config = ReportConfiguration().test_suite_name("homepage-no-flow").ui_state("Pre click")
+        axe = Axe(AxeDriver(self.page), report_configuration=report_config)
         results = axe.analyze()
         # pprint(results.findings.length)
         home_dir = os.system("cd ~")

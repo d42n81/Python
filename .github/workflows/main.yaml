@@ -31,7 +31,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: install cli
         run: |
-        npm install @axe-devtools/cli  
+          npm install @axe-devtools/cli  
       - name: Test with unnittest
         run: |
           python ./unitTestA11y.py

@@ -3,6 +3,6 @@
     "@axe-devtools/cli": "^4.4.3"
   },
   "scripts": {
-    "reporter":"axe --version"
+    "reporter":"axe reporter ./ ./results --format=html"
   }
 }

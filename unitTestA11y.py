@@ -1,4 +1,5 @@
 import json
+import os
 from operator import length_hint
 import unittest
 from pprint import pprint
@@ -20,6 +21,7 @@ class TestStringMethods(unittest.TestCase):
         axe = Axe(AxeDriver(self.page))
         results = axe.analyze()
         # pprint(results.findings.length)
+        print("`cd ~` ran with exit code %d" )
         with open("homePage.json", "w") as f:
             f.write(results.to_json())
     

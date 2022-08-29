@@ -5,10 +5,14 @@ from pprint import pprint
 from selenium import webdriver
 from axe_devtools_selenium import AxeDriver
 from axe_devtools_api import Axe
+from pyvirtualdisplay import Display
+
 
 class TestStringMethods(unittest.TestCase):
     def __init__(self, methodName: str = ...) -> None:
         super().__init__(methodName)
+        display = Display(visible=0, size=(800, 800))  
+        display.start()
         self.page = webdriver.Chrome()
     
     def takeScan(self):

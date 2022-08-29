@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@axe-devtools/cli": "^4.4.3"
+  },
+  "scripts": {
+    "reporter":"axe --version"
   }
 }

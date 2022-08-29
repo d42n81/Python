@@ -36,7 +36,8 @@ class TestStringMethods(unittest.TestCase):
         pprint(len(violations))
         file.close()
         # generate report:
-        os.system("axe reporter ./ ./results --format=html")
+        # os.system("axe reporter ./ ./results --format=html")
+        os.system("npm run reporter")
         # self.assertEqual(len(violations), 0)
 
 

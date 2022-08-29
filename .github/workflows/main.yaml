@@ -15,6 +15,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
@@ -26,6 +29,9 @@ jobs:
           pip install chromedriver-autoinstaller selenium pyvirtualdisplay
           pip install axe-devtools-api axe-devtools-unittest axe-devtools-selenium --extra-index-url https://${{secrets.EMAIL}}:${{secrets.APIKEY}}@agora.dequecloud.com/artifactory/api/pypi/devtools-python/simple
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: install cli
+        run: |
+        npm install @axe-devtools/cli
       - name: Test with unnittest
         run: |
           python ./unitTestA11y.py

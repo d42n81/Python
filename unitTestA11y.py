@@ -1,3 +1,4 @@
+from ensurepip import version
 import json
 import os
 from operator import length_hint
@@ -23,7 +24,8 @@ class TestStringMethods(unittest.TestCase):
         # pprint(results.findings.length)
         home_dir = os.system("cd ~")
         print("`cd ~` ran with exit code %d" % home_dir)
-        print("axe --version" )
+        axe_version = os.system("axe --version")
+        print("%s" % axe_version )
         with open("homePage.json", "w") as f:
             f.write(results.to_json())
     

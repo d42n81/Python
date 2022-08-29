@@ -20,7 +20,7 @@ class TestStringMethods(unittest.TestCase):
         self.page.get("http://abcdcomputech.dequecloud.com/")
         axe = Axe(AxeDriver(self.page))
         results = axe.analyze()
-        pprint(results.findings.length)
+        # pprint(results.findings.length)
         home_dir = os.system("cd ~")
         print("`cd ~` ran with exit code %d" % home_dir)
         print("axe --version" )

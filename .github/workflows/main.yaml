@@ -38,5 +38,7 @@ jobs:
       - name: add and commit
         if: failure()
         uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+      - name: fail build if tests failed
+        if: failure()
         run: |
           exit 1

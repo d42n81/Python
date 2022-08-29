@@ -33,6 +33,7 @@ jobs:
         run: |
           npm install @axe-devtools/cli  
       - name: Test with unnittest
+        continue-on-error: true
         run: |
           python ./unitTestA11y.py
       - name: add and commit

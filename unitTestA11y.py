@@ -39,7 +39,7 @@ class TestStringMethods(unittest.TestCase):
         # generate report:
         # os.system("axe reporter ./ ./results --format=html")
         os.system("npm run reporter")
-        # self.assertEqual(len(violations), 0)
+        self.assertEqual(len(violations), 0)
 
 
 if __name__ == '__main__':

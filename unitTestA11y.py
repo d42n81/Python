@@ -24,8 +24,7 @@ class TestStringMethods(unittest.TestCase):
         # pprint(results.findings.length)
         home_dir = os.system("cd ~")
         print("`cd ~` ran with exit code %d" % home_dir)
-        axe_version = os.system("axe --help")
-        print("%s" % axe_version )
+        # os.system("axe --help")
         with open("homePage.json", "w") as f:
             f.write(results.to_json())
     
@@ -36,6 +35,8 @@ class TestStringMethods(unittest.TestCase):
         violations = jsonObject.get("findings").get("violations")
         pprint(len(violations))
         file.close()
+        # generate report:
+        os.system("axe reporter ./ ./results --format=html")
         self.assertEqual(len(violations), 0)
 
 

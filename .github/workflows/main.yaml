@@ -35,4 +35,5 @@ jobs:
       - name: Test with unnittest
         run: |
           python ./unitTestA11y.py
-          axe --version
+      - name: add and commit
+        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.

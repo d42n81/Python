@@ -33,8 +33,10 @@ jobs:
         run: |
           npm install @axe-devtools/cli  
       - name: Test with unnittest
-        continue-on-error: true
         run: |
           python ./unitTestA11y.py
       - name: add and commit
+        if: failure()
         uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        run: |
+          exit 1

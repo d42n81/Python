@@ -22,6 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install chromedriver-py
           pip install axe-devtools-api axe-devtools-unittest axe-devtools-selenium --extra-index-url https://david.moore%40deque.com:AKCp8kqqmpFSS5fgQn3XfkXJuhsuo3mrXUyhH18CL2xam3CHVWtnfFJzLQqNCbVuEWhs1iH4q@agora.dequecloud.com/artifactory/api/pypi/devtools-python/simple
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with unnittest

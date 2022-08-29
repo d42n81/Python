@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@axe-devtools/cli": "^4.4.3"
+  }
+}

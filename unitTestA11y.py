@@ -25,7 +25,6 @@ class TestStringMethods(unittest.TestCase):
         # pprint(results.findings.length)
         home_dir = os.system("cd ~")
         print("`cd ~` ran with exit code %d" % home_dir)
-        # os.system("axe --help")
         with open("homePage.json", "w") as f:
             f.write(results.to_json())
     

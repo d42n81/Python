@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@axe-devtools/cli": "^4.4.3"
+    "@axe-devtools/cli": "^4.4.6"
   },
   "scripts": {
     "reporter": "axe reporter ./ ./ --format=html"
